@@ -1,2 +1,2 @@
-# ihp130_rodovalho_ip__lpopamp
-IHP 130nm general purpose operational amplifier
+# ihp130_rodovalho_ip__sbcs
+IHP 130nm self-bias current source
