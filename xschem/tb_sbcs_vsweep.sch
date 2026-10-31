@@ -1,9 +1,9 @@
-v {xschem version=3.4.4 file_version=1.2
-}
+v {xschem version=3.4.8RC file_version=1.3}
 G {}
 K {}
 V {}
 S {}
+F {}
 E {}
 N 80 -360 120 -360 { lab=avdd}
 N 80 -340 120 -340 { lab=avss}
@@ -61,14 +61,14 @@ C {devices/lab_pin.sym} 340 -360 0 1 {name=lcm3 sig_type=std_logic lab=avss}
 C {devices/lab_pin.sym} 340 -480 0 1 {name=lout_ sig_type=std_logic lab=o}
 C {devices/lab_pin.sym} 320 -100 0 1 {name=lavss4 sig_type=std_logic lab=avss}
 C {devices/code_shown.sym} 30 -650 0 0 {name=header only_toplevel=false value="
-.lib /home/rodovalho/git/sg13cmos5l_rodovalho_ip__sbcs/ngspice/models/cornerMOShv.lib mos_tt
+.lib $PDK_ROOT/$PDK/libs.tech/ngspice/models/cornerMOShv.lib mos_tt
 "
 }
 C {devices/code_shown.sym} 720 -520 0 0 {name=control only_toplevel=false value="
 .option cshunt = 1e-15
 .option gmin   = 1e-10
 .control
-  pre_osdi /home/rodovalho/git/sg13cmos5l_rodovalho_ip__sbcs/ngspice/models/psp103_nqs.osdi
+  pre_osdi .lib $PDK_ROOT/$PDK/libs.tech/ngspice/models/osdi/psp103_nqs.osdi
   
   dc v_avdd 3.3 0 -10m
   let io = i(v_o)

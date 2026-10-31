@@ -1,9 +1,9 @@
-v {xschem version=3.4.4 file_version=1.2
-}
+v {xschem version=3.4.8RC file_version=1.3}
 G {}
 K {}
 V {}
 S {}
+F {}
 E {}
 N 80 -360 120 -360 { lab=avdd}
 N 80 -340 120 -340 { lab=avss}
@@ -19,11 +19,9 @@ N 160 -200 160 -180 { lab=GND}
 N 240 -200 240 -180 { lab=avdd}
 N 440 -290 520 -290 { lab=en}
 N 440 -290 440 -270 { lab=en}
-N 600 -120 600 -100 { lab=avss}
 N 600 -290 680 -290 { lab=enb}
 N 600 -100 680 -100 { lab=avss}
 N 600 -290 600 -270 { lab=enb}
-N 440 -120 440 -100 { lab=avss}
 N 440 -100 600 -100 { lab=avss}
 N 300 -380 300 -360 { lab=avss}
 N 300 -480 300 -440 { lab=o}
@@ -41,9 +39,9 @@ N 200 -480 300 -480 {
 lab=o}
 N 300 -480 340 -480 {
 lab=o}
-N 600 -210 600 -120 {
+N 600 -210 600 -100 {
 lab=avss}
-N 440 -210 440 -120 {
+N 440 -210 440 -100 {
 lab=avss}
 C {devices/title.sym} 160 -40 0 0 {name=l6 author="Luis Henrique Rodovalho"}
 C {sbcs.sym} 120 -240 0 0 {name=Xdut}
@@ -78,15 +76,15 @@ C {devices/lab_pin.sym} 340 -360 0 1 {name=lcm3 sig_type=std_logic lab=avss}
 C {devices/lab_pin.sym} 340 -480 0 1 {name=lout_ sig_type=std_logic lab=o}
 C {devices/lab_pin.sym} 320 -100 0 1 {name=lavss4 sig_type=std_logic lab=avss}
 C {devices/code_shown.sym} 30 -650 0 0 {name=header only_toplevel=false value="
-.lib /home/rodovalho/git/sg13cmos5l_rodovalho_ip__sbcs/ngspice/models/cornerMOShv.lib mos_tt
+.lib $PDK_ROOT/$PDK/libs.tech/ngspice/models/cornerMOShv.lib mos_tt
 "
 }
 C {devices/code_shown.sym} 720 -520 0 0 {name=control only_toplevel=false value="
 .option cshunt = 1e-15
 .option gmin   = 1e-10
 .control
-  pre_osdi /home/rodovalho/git/sg13cmos5l_rodovalho_ip__sbcs/ngspice/models/psp103_nqs.osdi
-  
+  pre_osdi .lib $PDK_ROOT/$PDK/libs.tech/ngspice/models/osdi/psp103_nqs.osdi
+ 
   tran 10n 20u 10n uic
   let io = i(v_o)
   plot io ylimit 0 5u
