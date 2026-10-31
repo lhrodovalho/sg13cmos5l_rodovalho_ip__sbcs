@@ -1,0 +1,34 @@
+set xlabel 'Time (us)'
+set ylabel 'Output current (uA)'
+set grid
+set yrange [0:4]
+set key off
+set term png
+set output 'tran.png'
+set datafile separator ','
+plot \
+'../data/tb_sbcs_tran.csv0' using ($1*1e6):($2*1e6) with lines lt rgb 'blue',\
+'../data/tb_sbcs_tran.csv1' using ($1*1e6):($2*1e6) with lines lt rgb 'blue',\
+'../data/tb_sbcs_tran.csv2' using ($1*1e6):($2*1e6) with lines lt rgb 'blue',\
+'../data/tb_sbcs_tran.csv3' using ($1*1e6):($2*1e6) with lines lt rgb 'blue',\
+'../data/tb_sbcs_tran.csv4' using ($1*1e6):($2*1e6) with lines lt rgb 'blue',\
+'../data/tb_sbcs_tran.csv5' using ($1*1e6):($2*1e6) with lines lt rgb 'blue',\
+'../data/tb_sbcs_tran.csv6' using ($1*1e6):($2*1e6) with lines lt rgb 'blue',\
+'../data/tb_sbcs_tran.csv7' using ($1*1e6):($2*1e6) with lines lt rgb 'blue',\
+'../data/tb_sbcs_tran.csv8' using ($1*1e6):($2*1e6) with lines lt rgb 'blue',\
+'../data/tb_sbcs_tran.csv9' using ($1*1e6):($2*1e6) with lines lt rgb 'blue',\
+'../data/tb_sbcs_tran.csv10' using ($1*1e6):($2*1e6) with lines lt rgb 'blue',\
+'../data/tb_sbcs_tran.csv11' using ($1*1e6):($2*1e6) with lines lt rgb 'blue',\
+'../data/tb_sbcs_tran.csv12' using ($1*1e6):($2*1e6) with lines lt rgb 'blue',\
+'../data/tb_sbcs_tran.csv13' using ($1*1e6):($2*1e6) with lines lt rgb 'blue',\
+'../data/tb_sbcs_tran.csv14' using ($1*1e6):($2*1e6) with lines lt rgb 'blue',\
+'../data/tb_sbcs_tran.csv15' using ($1*1e6):($2*1e6) with lines lt rgb 'blue',\
+'../data/tb_sbcs_tran.csv16' using ($1*1e6):($2*1e6) with lines lt rgb 'blue',\
+'../data/tb_sbcs_tran.csv17' using ($1*1e6):($2*1e6) with lines lt rgb 'blue',\
+'../data/tb_sbcs_tran.csv18' using ($1*1e6):($2*1e6) with lines lt rgb 'blue',\
+'../data/tb_sbcs_tran.csv19' using ($1*1e6):($2*1e6) with lines lt rgb 'blue',\
+'../data/tb_sbcs_tran.csv20' using ($1*1e6):($2*1e6) with lines lt rgb 'blue',\
+'../data/tb_sbcs_tran.csv21' using ($1*1e6):($2*1e6) with lines lt rgb 'blue',\
+'../data/tb_sbcs_tran.csv22' using ($1*1e6):($2*1e6) with lines lt rgb 'blue',\
+'../data/tb_sbcs_tran.csv23' using ($1*1e6):($2*1e6) with lines lt rgb 'blue',\
+'../data/tb_sbcs_tran.csv24' using ($1*1e6):($2*1e6) with lines lt rgb 'blue',\

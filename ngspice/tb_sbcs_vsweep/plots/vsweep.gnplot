@@ -1,0 +1,21 @@
+set xlabel 'Supply Voltage (V)'
+set ylabel 'Output current (uA)'
+set grid
+set key off
+set term png
+set output 'vsweep.png'
+set datafile separator ','
+plot \
+'../data/tb_sbcs_vsweeep.csv0' using 1:($2*1e6) with lines lt rgb 'blue',\
+'../data/tb_sbcs_vsweeep.csv1' using 1:($2*1e6) with lines lt rgb 'blue',\
+'../data/tb_sbcs_vsweeep.csv2' using 1:($2*1e6) with lines lt rgb 'blue',\
+'../data/tb_sbcs_vsweeep.csv3' using 1:($2*1e6) with lines lt rgb 'blue',\
+'../data/tb_sbcs_vsweeep.csv4' using 1:($2*1e6) with lines lt rgb 'blue',\
+'../data/tb_sbcs_vsweeep.csv5' using 1:($2*1e6) with lines lt rgb 'blue',\
+'../data/tb_sbcs_vsweeep.csv6' using 1:($2*1e6) with lines lt rgb 'blue',\
+'../data/tb_sbcs_vsweeep.csv7' using 1:($2*1e6) with lines lt rgb 'blue',\
+'../data/tb_sbcs_vsweeep.csv8' using 1:($2*1e6) with lines lt rgb 'blue',\
+'../data/tb_sbcs_vsweeep.csv9' using 1:($2*1e6) with lines lt rgb 'blue',\
+'../data/tb_sbcs_vsweeep.csv10' using 1:($2*1e6) with lines lt rgb 'blue',\
+'../data/tb_sbcs_vsweeep.csv11' using 1:($2*1e6) with lines lt rgb 'blue',\
+'../data/tb_sbcs_vsweeep.csv12' using 1:($2*1e6) with lines lt rgb 'blue',\

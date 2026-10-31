@@ -1,0 +1,44 @@
+
+Note: Compatibility modes selected: hs a
+
+Warning: m=xx on .subckt line will override multiplier m hierarchy!
+
+
+Circuit: * num: 8 corner: mos_fs vdd: 3.6 temp: 25
+
+Option cshunt: 53 capacitors added with 1e-15 F each
+Doing analysis at TEMP = 25.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+Note: Starting dynamic gmin stepping
+Note: Dynamic gmin stepping completed
+
+No. of Data Rows : 34
+
+Warning: command 'plot' is not available during batch simulation, ignored!
+    You may use Gnuplot instead.
+
+binary raw file "../out/sp8.raw"
+Doing analysis at TEMP = 25.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+No. of Data Columns : 2  
+Note: Starting dynamic gmin stepping
+Note: Dynamic gmin stepping completed
+
+No. of Data Rows : 34
+
+Total analysis time (seconds) = 0.79998
+
+Total elapsed time (seconds) = 0.902 
+
+Total DRAM available = 19163.023 MB.
+DRAM currently available = 6346.445 MB.
+Maximum ngspice program size =  102.410 MB.
+Current ngspice program size =   21.438 MB.
+
+Shared ngspice pages =   12.105 MB.
+Text (code) pages =    6.406 MB.
+Stack = 0 bytes.
+Library pages =   17.438 MB.
+

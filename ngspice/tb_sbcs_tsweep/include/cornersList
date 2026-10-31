@@ -1,0 +1,10 @@
+num,vdd,temp,corner
+0,3.3,25,mos_tt
+1,2.0,25,mos_ss
+2,2.0,25,mos_ff
+3,2.0,25,mos_sf
+4,2.0,25,mos_fs
+5,3.6,25,mos_ss
+6,3.6,25,mos_ff
+7,3.6,25,mos_sf
+8,3.6,25,mos_fs

@@ -1,0 +1,11 @@
+
+Note: Compatibility modes selected: hs a
+
+Warning: m=xx on .subckt line will override multiplier m hierarchy!
+
+
+Circuit: * num: 9 corner: mos_fs vdd: 3.6 temp: 25
+
+Too few parameters for subcircuit type "sbcs" (instance: xxdut)
+    Simulation interrupted due to error!
+

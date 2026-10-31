@@ -1,0 +1,47 @@
+* num: 6 corner: mos_ff vdd: 3.3 temp: 25
+
+* Include models
+.lib ../../models/cornerMOShv.lib mos_ff
+.lib ../../models/cornerMOSlv.lib mos_ff
+.temp 25
+
+.include ../../netlists/sbcs.spice
+
+
+* Simulation parameters
+.param xavdd = 3.3
+.param xavss = 0
+.param xvo   = 0
+
+* Design under test
+*.subckt sbcs io vdd vss en enb
+xdut io avdd avss en enb sbcs
+
+v_avss GND avss xavss
+v_avdd avdd avss dc {xavdd} 
+v_io io avss {xvo}
+v_en  en  vss 3.3
+v_enb enb vss 0
+
+* Simulation control
+.option gmin=1e-10
+.option cshunt=1e-15
+.option method=Gear
+
+.dc v_avdd 3.3 0 -10m
+
+.save i(v_io)
+.control
+  pre_osdi ../../models/psp103_nqs.osdi
+
+  run
+  let io = i(v_io)
+  plot io
+
+  wrdata ../data/tb_sbcs_vsweeep.dat6 io
+
+.endc
+
+.GLOBAL GND 
+.end 
+

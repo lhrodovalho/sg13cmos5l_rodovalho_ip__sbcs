@@ -1,0 +1,49 @@
+* num: 10 corner: mos_ff vdd: 1.8 temp: 125
+
+* Include models
+.lib ../../models/cornerMOShv.lib mos_ff
+.lib ../../models/cornerMOSlv.lib mos_ff
+.temp 125
+
+.include ../../netlists/sbcs.spice
+
+
+* Simulation parameters
+.param xavdd = 1.8
+.param xavss = 0
+.param xvo   = 0
+
+* Design under test
+*.subckt sbcs io vdd vss en enb
+xdut io avdd avss en enb sbcs
+
+v_avss GND avss xavss
+v_avdd avdd avss dc {xavdd} 
+v_io io avss {xvo}
+v_en  en  avss 0       pwl(0 0       1u 0       1.1u {xavdd} 9u {xavdd} 9.1u 0)
+v_enb enb avss {xavdd} pwl(0 {xavdd} 1u {xavdd} 1.1u 0       9u 0       9.1u {xavdd})
+
+* Simulation control
+.option gmin=1e-12
+.option cshunt=1e-15
+.option method=Gear
+
+.tran 100n 10u
+.ic v(avdd) = 1.8
+
+*.save i(v_io)
+.control
+  pre_osdi ../../models/psp103_nqs.osdi
+
+  run
+  let io = i(v_io)
+  plot io ylimit 0 5u
+  plot xdut.bp xdut.bp0 xdut.bn
+
+  wrdata ../data/tb_sbcs_tran.dat10 io
+
+.endc
+
+.GLOBAL GND 
+.end 
+

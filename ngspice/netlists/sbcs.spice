@@ -1,0 +1,76 @@
+* NGSPICE file created from lvlshifter.ext - technology: ihp-sg13cmos5l
+
+.subckt n1_1 d g s b
+xd d g x b sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u m=4
+xs x g s b sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u m=4
+cg g b 10f
+.ends
+
+.subckt n2_1 d g s b
+xl d g s b n1_1
+xr d g s b n1_1
+.ends
+
+.subckt n1_2 d g s b
+xd d g x b n1_1
+xs x g s b n1_1
+.ends
+
+.subckt n1_4 d g s b
+xd d g x b n1_2
+xs x g s b n1_2
+.ends
+
+
+.subckt p1_1 d g s b
+xl d g s b sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u m=4
+xr d g s b sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u m=4
+.ends
+
+.subckt p1_2 d g s b
+xd d g x b p1_1
+xs x g s b p1_1
+.ends
+
+.subckt p1_4 d g s b
+xd d g x b p1_2
+xs x g s b p1_2
+.ends
+
+.subckt p2_1 d g s b
+xl d g s b p1_1
+xr d g s b p1_1
+.ends
+
+.subckt p2_2 d g s b
+xl d g s b p1_2
+xr d g s b p1_2
+.ends
+
+.subckt sbcs io vdd vss en enb
+x0a x   bp  vdd vdd p2_2
+x0b x   x   y0  vss n2_1
+x0c y0  x   vss vss n1_2
+
+x1a bn0 bp  vdd vdd p1_4
+x1b bn0 bn0 y0  vss n2_1
+x1c y0  x   vss vss n1_2
+
+x2a bn  bp  vdd vdd p1_4
+x2b bn  bn0 y1  vss n2_1
+x2c y1  bn0 vss vss n1_2
+
+x3a bp0 bp  vdd vdd p1_4
+x3b bp0 bn  y2  vss n2_1
+x3c y2  bn  vss vss n1_2
+
+x4a io  bp  vdd vdd p2_2
+
+x5a bp  en  vdd vdd p1_2
+x6a bp  enb bp0 vdd p2_1
+x6c bn  enb vss vss n1_2
+x7c bp0 enb vss vss n1_2
+
+cc bn bp0 1.0p
+.ends
+

@@ -1,0 +1,178 @@
+
+Note: Compatibility modes selected: hs a
+
+Warning: m=xx on .subckt line will override multiplier m hierarchy!
+
+
+Circuit: * num: 9 corner: mos_ss vdd: 1.8 temp: 125
+
+Option cshunt: 53 capacitors added with 1e-15 F each
+Doing analysis at TEMP = 125.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+Note: Starting dynamic gmin stepping
+Note: Dynamic gmin stepping completed
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+xdut.x                                0.227397
+xdut.bp                                    1.8
+xdut.x0a.xl.x                          1.77556
+avdd                                       1.8
+xdut.x0a.xr.x                          1.77556
+xdut.x0b.xl.x                        0.0710433
+avss                                         0
+xdut.y0                              0.0467438
+xdut.x0b.xr.x                        0.0710433
+xdut.x0c.xd.x                        0.0282082
+xdut.x0c.x                           0.0161349
+xdut.x0c.xs.x                       0.00715562
+xdut.bn0                              0.180337
+xdut.x1a.xd.x                          1.75686
+xdut.x1a.x                             1.77925
+xdut.x1a.xs.x                          1.79144
+xdut.x1b.xl.x                        0.0700702
+xdut.x1b.xr.x                        0.0700702
+xdut.x1c.xd.x                        0.0282082
+xdut.x1c.x                           0.0161349
+xdut.x1c.xs.x                       0.00715562
+xdut.bn                            2.26727e-07
+xdut.x2a.xd.x                          1.75657
+xdut.x2a.x                             1.77915
+xdut.x2a.xs.x                          1.79141
+xdut.x2b.xl.x                      2.03755e-07
+xdut.y1                            1.80955e-07
+xdut.x2b.xr.x                      2.03755e-07
+xdut.x2c.xd.x                      1.35583e-07
+xdut.x2c.x                         9.03255e-08
+xdut.x2c.xs.x                      4.51437e-08
+xdut.bp0                           1.10816e-06
+xdut.x3a.xd.x                          1.75657
+xdut.x3a.x                             1.77915
+xdut.x3a.xs.x                          1.79141
+xdut.x3b.xl.x                      9.60086e-07
+xdut.y2                            8.33735e-07
+xdut.x3b.xr.x                      9.60086e-07
+xdut.x3c.xd.x                      6.09333e-07
+xdut.x3c.x                         3.98719e-07
+xdut.x3c.xs.x                      1.97129e-07
+io                                           0
+xdut.x4a.xl.x                           1.7753
+xdut.x4a.xr.x                           1.7753
+en                                           0
+xdut.x5a.x                                 1.8
+enb                                        1.8
+xdut.x6c.xd.x                      1.70045e-07
+xdut.x6c.x                         1.13363e-07
+xdut.x6c.xs.x                      5.66817e-08
+xdut.x7c.xd.x                      8.31121e-07
+xdut.x7c.x                         5.54081e-07
+xdut.x7c.xs.x                       2.7704e-07
+v_enb#branch                       1.77636e-15
+v_en#branch                                  0
+v_io#branch                        1.56998e-10
+v_avdd#branch                                0
+v_avss#branch                     -7.28547e-10
+
+
+No. of Data Rows : 152
+
+Warning: command 'plot' is not available during batch simulation, ignored!
+    You may use Gnuplot instead.
+
+
+Warning: command 'plot' is not available during batch simulation, ignored!
+    You may use Gnuplot instead.
+
+binary raw file "../out/sp9.raw"
+Doing analysis at TEMP = 125.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+No. of Data Columns : 3267  
+Note: Starting dynamic gmin stepping
+Note: Dynamic gmin stepping completed
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+xdut.x                                0.227397
+xdut.bp                                    1.8
+xdut.x0a.xl.x                          1.77556
+avdd                                       1.8
+xdut.x0a.xr.x                          1.77556
+xdut.x0b.xl.x                        0.0710433
+avss                                         0
+xdut.y0                              0.0467438
+xdut.x0b.xr.x                        0.0710433
+xdut.x0c.xd.x                        0.0282082
+xdut.x0c.x                           0.0161349
+xdut.x0c.xs.x                       0.00715562
+xdut.bn0                              0.180337
+xdut.x1a.xd.x                          1.75686
+xdut.x1a.x                             1.77925
+xdut.x1a.xs.x                          1.79144
+xdut.x1b.xl.x                        0.0700702
+xdut.x1b.xr.x                        0.0700702
+xdut.x1c.xd.x                        0.0282082
+xdut.x1c.x                           0.0161349
+xdut.x1c.xs.x                       0.00715562
+xdut.bn                            2.26727e-07
+xdut.x2a.xd.x                          1.75657
+xdut.x2a.x                             1.77915
+xdut.x2a.xs.x                          1.79141
+xdut.x2b.xl.x                      2.03755e-07
+xdut.y1                            1.80955e-07
+xdut.x2b.xr.x                      2.03755e-07
+xdut.x2c.xd.x                      1.35583e-07
+xdut.x2c.x                         9.03255e-08
+xdut.x2c.xs.x                      4.51437e-08
+xdut.bp0                           1.10816e-06
+xdut.x3a.xd.x                          1.75657
+xdut.x3a.x                             1.77915
+xdut.x3a.xs.x                          1.79141
+xdut.x3b.xl.x                      9.60086e-07
+xdut.y2                            8.33735e-07
+xdut.x3b.xr.x                      9.60086e-07
+xdut.x3c.xd.x                      6.09333e-07
+xdut.x3c.x                         3.98719e-07
+xdut.x3c.xs.x                      1.97129e-07
+io                                           0
+xdut.x4a.xl.x                           1.7753
+xdut.x4a.xr.x                           1.7753
+en                                           0
+xdut.x5a.x                                 1.8
+enb                                        1.8
+xdut.x6c.xd.x                      1.70045e-07
+xdut.x6c.x                         1.13363e-07
+xdut.x6c.xs.x                      5.66817e-08
+xdut.x7c.xd.x                      8.31121e-07
+xdut.x7c.x                         5.54081e-07
+xdut.x7c.xs.x                       2.7704e-07
+v_enb#branch                       1.77636e-15
+v_en#branch                                  0
+v_io#branch                        1.56998e-10
+v_avdd#branch                                0
+v_avss#branch                     -7.28547e-10
+
+
+No. of Data Rows : 152
+
+Total analysis time (seconds) = 0.958235
+
+Total elapsed time (seconds) = 1.061 
+
+Total DRAM available = 19163.023 MB.
+DRAM currently available = 6235.773 MB.
+Maximum ngspice program size =  108.965 MB.
+Current ngspice program size =   28.070 MB.
+
+Shared ngspice pages =   12.246 MB.
+Text (code) pages =    6.406 MB.
+Stack = 0 bytes.
+Library pages =   23.992 MB.
+

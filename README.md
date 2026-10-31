@@ -1,2 +1,2 @@
-# sg13cmos5l_rodovalho_ip__sbcs
-CMOS only self-biased current source
+# ihp130_rodovalho_ip__lpopamp
+IHP 130nm general purpose operational amplifier

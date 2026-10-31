@@ -1,0 +1,17 @@
+set xlabel 'Temperature (ºC)'
+set ylabel 'Output current (uA)'
+set grid
+set key off
+set term png
+set output 'tsweep.png'
+set datafile separator ','
+plot \
+'../data/tb_sbcs_tsweeep.csv0' using 1:($2*1e6) with lines lt rgb 'blue',\
+'../data/tb_sbcs_tsweeep.csv1' using 1:($2*1e6) with lines lt rgb 'blue',\
+'../data/tb_sbcs_tsweeep.csv2' using 1:($2*1e6) with lines lt rgb 'blue',\
+'../data/tb_sbcs_tsweeep.csv3' using 1:($2*1e6) with lines lt rgb 'blue',\
+'../data/tb_sbcs_tsweeep.csv4' using 1:($2*1e6) with lines lt rgb 'blue',\
+'../data/tb_sbcs_tsweeep.csv5' using 1:($2*1e6) with lines lt rgb 'blue',\
+'../data/tb_sbcs_tsweeep.csv6' using 1:($2*1e6) with lines lt rgb 'blue',\
+'../data/tb_sbcs_tsweeep.csv7' using 1:($2*1e6) with lines lt rgb 'blue',\
+'../data/tb_sbcs_tsweeep.csv8' using 1:($2*1e6) with lines lt rgb 'blue',\
